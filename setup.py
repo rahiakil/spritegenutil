@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='my-python-utility',
-    version='0.1.0',
-    author='Your Name',
-    author_email='your.email@example.com',
-    description='A utility library for various tasks',
+    name='spirte-gen',
+    version='0.1.1',
+    author='Rahi Akil',
+    author_email='plow.miner@gmail.com',
+    description='A utility library for various tasks related to sprite generation',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/yourusername/my-python-utility',

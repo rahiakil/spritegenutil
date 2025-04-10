@@ -1,48 +1,69 @@
 # My Python Utility
 
-This is a Python utility library that provides various utility functions to simplify common tasks.
+# Installable SpriteGen Utility Library
+
+This is a Python library designed to provide utility functions for sprite generation and related tasks.
 
 ## Installation
 
-You can install the library using pip. First, clone the repository:
+To install the library, follow these steps:
 
-```
-git clone https://github.com/yourusername/my-python-utility.git
-cd my-python-utility
-```
+1. Clone the repository:
 
-Then, install the required dependencies:
+    ```bash
+    git clone git@github.com:rahiakil/spritegenutil.git
+    cd spritegenutil
+    ```
 
-```
-pip install -r requirements.txt
-```
+2. Install the library and its dependencies:
+
+    ```bash
+    pip install .
+    ```
+
+    Alternatively, you can install the dependencies manually:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## Usage
 
-To use the utility functions, you can import them from the library as follows:
+You can use the utility functions provided by the library in your Python projects. Here's an example:
 
 ```python
-from my_python_utility.utils import function_one, function_two, function_three
+from spritegenutil import sprite_generator
+
+# Example usage
+sprite_generator.generate_sprite(input_data, output_path)
 ```
 
-### Available Functions
+### Key Features
 
-- `function_one`: Description of what function_one does.
-- `function_two`: Description of what function_two does.
-- `function_three`: Description of what function_three does.
+- `generate_sprite`: Generates a sprite from the given input data.
+- `optimize_sprite`: Optimizes an existing sprite for better performance.
+- `validate_sprite`: Validates the structure and format of a sprite.
 
 ## Running Tests
 
-To run the tests for this library, you can use the following command:
+To ensure the library works as expected, run the test suite using:
 
+```bash
+pytest
 ```
-pytest tests/
-```
+
+Make sure you have `pytest` installed before running the tests.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+We welcome contributions! If you'd like to contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Submit a pull request with a clear description of your changes.
+
+Feel free to open an issue for any bugs or feature requests.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
