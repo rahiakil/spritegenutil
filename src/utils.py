@@ -8,7 +8,7 @@ from datetime import datetime
 from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration
 from PIL import Image
-
+from .helpers import copy_folder_with_timestamp
 def split_image_by_empty_space(image_path, output_folder, min_area=1000):
     """
     Splits an image into smaller segments based on empty space and saves the segments as separate image files.
@@ -279,3 +279,15 @@ def describe_and_rename_images(folder):
 
         except Exception as e:
             print(f"Error processing {filename}: {e}")
+
+
+def create_sprites_from_sheet(sheet_path, output_folder):
+    # Split the sheet into individual images
+    split_image_by_empty_space(sheet_path, output_folder)
+    new_folder = copy_folder_with_timestamp(output_folder)
+
+    # Remove small images
+    remove_small_images(new_folder)
+
+    # Resize images to fixed size
+    resize_images_with_background_no_ar(new_folder)
